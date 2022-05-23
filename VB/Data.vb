@@ -21,14 +21,14 @@ Namespace DXPivotGrid_HidingColumnsAndRows
 		Private Sub New()
 		End Sub
 		Public Shared Sub FillPivot(ByVal pivot As PivotGridControl)
-			pivot.Fields.Add(Employee, FieldArea.RowArea)
-			pivot.Fields.Add(Widget, FieldArea.RowArea)
-			pivot.Fields.Add(Month, FieldArea.ColumnArea).AreaIndex = 0
-			pivot.Fields.Add(RetailPrice, FieldArea.DataArea)
-			pivot.Fields.Add(WholesalePrice, FieldArea.DataArea)
-			pivot.Fields.Add(Quantity, FieldArea.DataArea)
-			pivot.Fields.Add(Remains, FieldArea.DataArea)
-			For Each field As PivotGridField In pivot.Fields
+            pivot.Fields.AddDataSourceColumn(Employee, FieldArea.RowArea)
+            pivot.Fields.AddDataSourceColumn(Widget, FieldArea.RowArea)
+            pivot.Fields.AddDataSourceColumn(Month, FieldArea.ColumnArea).AreaIndex = 0
+            pivot.Fields.AddDataSourceColumn(RetailPrice, FieldArea.DataArea)
+            pivot.Fields.AddDataSourceColumn(WholesalePrice, FieldArea.DataArea)
+            pivot.Fields.AddDataSourceColumn(Quantity, FieldArea.DataArea)
+            pivot.Fields.AddDataSourceColumn(Remains, FieldArea.DataArea)
+            For Each field As PivotGridField In pivot.Fields
 				field.AllowedAreas = GetAllowedArea(field.Area)
 			Next field
 			pivot.RowTotalsLocation = FieldRowTotalsLocation.Near

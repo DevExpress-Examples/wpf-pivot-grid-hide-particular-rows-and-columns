@@ -18,13 +18,13 @@ namespace DXPivotGrid_HidingColumnsAndRows {
         public const string WidgetC = "Widget C";
 
         public static void FillPivot(PivotGridControl pivot) {
-            pivot.Fields.Add(Employee, FieldArea.RowArea);
-            pivot.Fields.Add(Widget, FieldArea.RowArea);
-            pivot.Fields.Add(Month, FieldArea.ColumnArea).AreaIndex = 0;
-            pivot.Fields.Add(RetailPrice, FieldArea.DataArea);
-            pivot.Fields.Add(WholesalePrice, FieldArea.DataArea);
-            pivot.Fields.Add(Quantity, FieldArea.DataArea);
-            pivot.Fields.Add(Remains, FieldArea.DataArea);
+            pivot.Fields.AddDataSourceColumn(Employee, FieldArea.RowArea);
+            pivot.Fields.AddDataSourceColumn(Widget, FieldArea.RowArea);
+            pivot.Fields.AddDataSourceColumn(Month, FieldArea.ColumnArea).AreaIndex = 0;
+            pivot.Fields.AddDataSourceColumn(RetailPrice, FieldArea.DataArea);
+            pivot.Fields.AddDataSourceColumn(WholesalePrice, FieldArea.DataArea);
+            pivot.Fields.AddDataSourceColumn(Quantity, FieldArea.DataArea);
+            pivot.Fields.AddDataSourceColumn(Remains, FieldArea.DataArea);
             foreach (PivotGridField field in pivot.Fields) {
                 field.AllowedAreas = GetAllowedArea(field.Area);
             }

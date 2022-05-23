@@ -14,7 +14,8 @@
         </Grid.RowDefinitions>
         <dxpg:PivotGridControl Grid.Row="1" Margin="2,2,2,0" Name="pivotGrid" AllowDrag="False"
                                FieldValueDisplayText="pivotGrid_FieldValueDisplayText" 
-                               AllowFilter="False" />
+                               AllowFilter="False"
+                               DataProcessingEngine="Optimized"/>
         <GroupBox Grid.Row="0" Height="Auto" Margin="2,2,2,0"
                   Name="groupBox1" VerticalAlignment="Bottom">
             <StackPanel Orientation="Vertical">
