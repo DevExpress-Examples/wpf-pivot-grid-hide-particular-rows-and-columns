@@ -19,9 +19,9 @@
                   Name="groupBox1" VerticalAlignment="Bottom">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="rbDefault" IsChecked="True" Content="Default Layout"
-                             Margin="0,0,0,2" Checked="rbDefault_Checked" />
+                             Margin="0,0,0,2" Checked="rbDefault_Checked"/>
                 <RadioButton Checked="rbDefault_Checked" Margin="0,2,0,0"
-                    Content="Delete All Rows Corresponding to 'Employee B' except for the Total Row" />
+                    Content="Delete All Rows Corresponding to 'Employee B' except for the Total Row"/>
             </StackPanel>
         </GroupBox>
     </Grid>
